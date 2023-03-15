@@ -277,7 +277,7 @@ button:hover {
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 750px) {
   body {
     display: block;
   }
