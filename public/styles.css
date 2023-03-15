@@ -1,0 +1,309 @@
+:root {
+  /* Colors */
+
+  /* Add transparency later to the hsl by converting to hsla to get the variations right */
+
+  /* Primary */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* fonts */
+  --SF: "Hanken Grotesk", sans-serif;
+  /* Used with 500, 700, and 800 fw */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  font-size: 1.8;
+}
+
+p {
+  font-size: 18px;
+}
+
+.fw-800 {
+  font-weight: 800;
+  font-family: var(--SF);
+}
+
+.fw-700 {
+  font-weight: 700;
+  font-family: var(--SF);
+}
+
+.fw-500 {
+  font-weight: 500;
+  font-family: var(--SF);
+}
+
+.container {
+  width: 25%;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10%;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.score_card {
+  text-align: center;
+  min-width: 50%;
+  padding: 1.4rem;
+  background-image: linear-gradient(
+    to top,
+    var(--Light-royal-blue-background),
+    var(--Light-slate-blue-background)
+  );
+  border-radius: 7%;
+}
+
+.circle_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.circle-border {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to top,
+    var(--Persian-blue-circle),
+    var(--Violet-blue-circle)
+  );
+}
+
+#score {
+  font-size: 4rem;
+  font-family: var(--SF);
+  margin-top: 2rem;
+}
+
+.message {
+  margin-top: 0.5rem;
+  padding: 0 0.8rem;
+}
+
+.rank_card {
+  min-width: 50%;
+  padding: 1.4rem;
+  background-color: var(--White);
+  border-radius: 5%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.bars {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0.4rem 0;
+  padding: 0.5rem;
+}
+
+.grey {
+  color: grey;
+}
+
+#stat1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#stat2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#stat3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#stat4 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 1rem;
+}
+
+svg {
+  margin-right: 0.5rem;
+}
+
+.white {
+  color: var(--White);
+}
+
+.lavender {
+  color: var(--Light-lavender);
+}
+
+#LR {
+  color: var(--Light-red);
+}
+
+#stat-bar1 {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+#OY {
+  color: var(--Orangey-yellow);
+}
+
+#stat-bar2 {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+#GT {
+  color: var(--Green-teal);
+}
+
+#stat-bar3 {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+#CB {
+  color: var(--Cobalt-blue);
+}
+
+#stat-bar4 {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+button {
+  margin-top: 2rem;
+  height: 3rem;
+  font-family: var(--SF);
+  font-weight: 700;
+  background-color: var(--Dark-gray-blue);
+  border-radius: 100px;
+  font-size: 18px;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+  cursor: pointer;
+}
+
+@media (max-width: 2235px) {
+  .container {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1910px) {
+  .container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1414px) {
+  .container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1197px) {
+  .container {
+    width: 56%;
+  }
+}
+
+@media (max-width: 924px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 766px) {
+  body {
+    display: block;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .score_card {
+    border-radius: 0 0 10% 10%;
+  }
+
+  .rank_card {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 280px) {
+  .rank_card {
+    padding: 1rem;
+  }
+
+  .stats {
+    padding: 0;
+  }
+}
