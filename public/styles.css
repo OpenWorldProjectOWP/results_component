@@ -33,21 +33,25 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 1.3rem;
-  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
 }
 
 h2 {
-  font-size: 1.8;
+  font-size: 1.6rem;
 }
 
 p {
@@ -70,8 +74,8 @@ p {
 }
 
 .container {
-  width: 25%;
-  height: 430px;
+  width: 30%;
+  height: 500px;
   display: flex;
   justify-content: center;
   border-radius: 10%;
@@ -82,7 +86,11 @@ p {
 }
 
 .score_card {
+  display: flex;
   text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
   min-width: 50%;
   padding: 1.4rem;
   background-image: linear-gradient(
@@ -95,17 +103,17 @@ p {
 
 .circle_content {
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin: 2rem 0;
   width: 100%;
-  padding: 1rem;
 }
 
 .circle-border {
   display: flex;
   flex-direction: column;
-  width: 170px;
-  height: 170px;
+  justify-content: center;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   background-image: linear-gradient(
     to top,
@@ -117,17 +125,19 @@ p {
 #score {
   font-size: 4rem;
   font-family: var(--SF);
-  margin-top: 2rem;
 }
 
 .message {
-  margin-top: 0.5rem;
-  padding: 0 0.8rem;
+  padding: 0 1.8rem;
 }
 
 .rank_card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
   min-width: 50%;
-  padding: 1.4rem;
+  padding: 1.3rem;
   background-color: var(--White);
   border-radius: 5%;
 }
@@ -139,11 +149,11 @@ p {
 }
 
 .bars {
-  height: 3rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   border-radius: 5px;
-  margin: 0.4rem 0;
+  margin: 0.5rem 0;
   padding: 0.5rem;
 }
 
@@ -181,7 +191,7 @@ p {
 }
 
 .icon {
-  width: 1rem;
+  width: 1.5rem;
 }
 
 svg {
@@ -229,8 +239,8 @@ svg {
 }
 
 button {
-  margin-top: 2rem;
-  height: 3rem;
+  height: 3.5rem;
+  margin: 2.5rem 0 0 0;
   font-family: var(--SF);
   font-weight: 700;
   background-color: var(--Dark-gray-blue);
@@ -247,63 +257,48 @@ button:hover {
   cursor: pointer;
 }
 
-@media (max-width: 2235px) {
-  .container {
-    width: 35%;
-  }
-}
-
-@media (max-width: 1910px) {
+@media (max-width: 1957px) {
   .container {
     width: 40%;
   }
 }
 
-@media (max-width: 1414px) {
+@media (max-width: 1441px) {
   .container {
-    width: 45%;
+    width: 50%;
   }
 }
 
-@media (max-width: 1197px) {
+@media (max-width: 1153px) {
   .container {
-    width: 56%;
+    width: 60%;
   }
 }
 
-@media (max-width: 924px) {
+@media (max-width: 961px) {
   .container {
-    width: 80%;
+    width: 70%;
   }
 }
 
-@media (max-width: 700px) {
-  body {
+@media (max-width: 815px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 641px) {
+  .container {
     display: block;
-  }
-
-  .container {
-    display: block;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    border-radius: 0;
+    padding: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .score_card {
     border-radius: 0 0 10% 10%;
   }
-
-  .rank_card {
-    border-radius: 0;
-  }
 }
 
-@media (max-width: 280px) {
-  .rank_card {
-    padding: 1rem;
-  }
-
-  .stats {
-    padding: 0;
-  }
-}
